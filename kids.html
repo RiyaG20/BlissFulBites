@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo-container">
+                <a href="#" class="logo"><i class="fas fa-bread-slice"></i>Blissful Bites Bakery</a>
+            </div>
+
+            <div class="nav-items">
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <div class="product-btn">
+                    <a href="product.html">Product</a>
+                    <div class="dropdown">
+                        <div class="options">
+                            <a href="cakes.html">Party Cakes</a>
+                            <a href="egglesscake.html">Eggless Cakes</a>
+                            <a href="kids.html">Kids Cakes</a>
+                            <a href="anniversary.html">Anniversary Cakes</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="icons">
+                <div id="cart-btn" class="fas fa-shopping-cart"></div>
+                <div id="login-btn" class="fas fa-user"></div>
+                <div id="menu-btn" class="fas fa-bars"></div>
+            </div>
+            
+            <div class="cart-items-container">
+                <h2 class="total">Total:₹0.00</h2>
+                <a href="#" class="btn">Checkout Cart</a>
+            </div>
+            <form action="" class="login-form" name="myForm" ng-app="myApp" ng-controller="myCtrl" novalidate>
+                <h4>Login Form</h4>
+                <p>
+                    <input type="email" name="email" ng-model="email" placeholder="Enter Your Email" class="boxes" required>
+                    <span ng-show="myForm.email.$dirty && myForm.email.$invalid">
+                        <span ng-show="myForm.email.$error.required">Email is Required!!</span>
+                        <span ng-show="myForm.email.$error.email">Invalid Address!!</span>
+                    </span>
+                </p>
+                <p>
+                    <input type="password" name="password" ng-model="password" placeholder="Enter Your Password" class="boxes" required>
+                    <span ng-show="myForm.password.$dirty && myForm.password.$invalid">
+                        <span ng-show="myForm.password.$error.required">Password Required!!</span>
+                    </span>
+                </p>
+                <div class="remember">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember Me</label>
+                </div>
+                <p>
+                <input type="submit" value="Login" class="btn" ng-disabled="myForm.email.$dirty && myForm.email.$invalid
+                || myForm.password.$dirty && myForm.password.$invalid">
+                </p>
+            </form>
+        </div>
+        
+        <div class="items">
+            <div class="title">KIDS <span>CAKES</span></div>
+            <div class="box-container">
+                <div class="box">
+                    <img src="./images/sq-world-of-disney-them.webp" alt="" width="430">
+                    <h3>DISNEY FONDANT CAKE</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="prices">₹2000.00</div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+                <div class="box">
+                    <img src="./images/sq-slice-of-disneyland.webp" alt="" width="430">
+                    <h3>CARTOON FONDANT CAKE</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="prices">₹1900.00</div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+                <div class="box">
+                    <img src="./images/sq-round-personalised-first-birthday.webp" alt="" height="430">
+                    <h3>FIRST BIRTHDAY CAKE</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="prices">₹1800.00</div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+                <div class="box">
+                    <img src="./images/sq-round-shape-peppa.webp" alt="" height="430">
+                    <h3>PEPPA CAKE</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="prices">₹1200.00</div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+                <div class="box">
+                    <img src="./images/squ-mickey_mouse.webp" alt="" height="430">
+                    <h3>MICKEY MOUSE CAKE</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="prices">₹1500.00</div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+                <div class="box">
+                    <img src="./images/playful-chhota-bheem.webp" alt="" height="430">
+                    <h3>CHHOTA BHEEM CAKE</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="prices">₹1000.00</div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+                <div class="box">
+                    <img src="./images/sq-my-minnie-mouse.webp" alt="" height="430">
+                    <h3>MINNIE MOUSE CAKE</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="prices">₹999.00</div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+                <div class="box">
+                    <img src="./images/sq-tom-fondant-cake.webp" alt="" height="430">
+                    <h3>TOM FONDANT CAKE</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="prices">₹1800.00</div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+                
+                <div class="box">
+                    <img src="./images/sq-mickey-mouse-themed-cake.webp" alt="" width="430">
+                    <h3>MICKEY MOUSE THEME CAKE</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="prices">₹1649.00</div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+                <div class="box">
+                    <img src="./images/sq-doraemon-cream-cak.webp" alt="" height="430">
+                    <h3>DORAEMON FONDANT CAKE</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="prices">₹1600.00</div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+                
+                <div class="box">
+                    <img src="./images/sq-round-shaped-mickey-mouse.webp" alt="" height="430">
+                    <h3>MICKEY MOUSE CAKE</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="prices">₹1200.00</div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+                
+                <div class="box">
+                    <img src="./images/barbie-cake.webp" alt="" width="430">
+                    <h3>BARBIE CAKE</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="prices">₹1400.00</div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="box-container">
+                <div class="box">
+                    <h3>Find Us Here</h3>
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <h3>Contact Us</h3>
+                    <p>9671106110</p>
+                    <a href="#" class="link">gulatiriya20@gmail.com</a>
+                </div>
+
+                <div class="box">
+                    <h3>Localization</h3>
+                    <p>DEHRADUN</p>
+                    
+                </div>
+            </div>
+            <div class="credit">Created By <span>Riya</span> | all rights reserved</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
